@@ -13,3 +13,9 @@ If you use the privacy policy, update it with your details.
 
 
 ![boilerplate-webpage](https://github.com/user-attachments/assets/16e79216-d3d8-45e4-a11a-15a9d255b874)
+
+## AND THEN
+
+I went off and taught myself Flask along with some Youtube vids.
+Responsive, productionised and running on my online host right now.
+
