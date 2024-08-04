@@ -10,3 +10,6 @@ The webpage has a Navbar, a man Section and a footer.
 
 From the footwer you can access a second poage with a privacy policy.
 If you use the privacy policy make sure to update it with your own details
+
+
+![boilerplate-webpage](https://github.com/user-attachments/assets/16e79216-d3d8-45e4-a11a-15a9d255b874)
