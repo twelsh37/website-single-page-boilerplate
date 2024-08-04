@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="{% block description %}Skills Matrix - Manage and track your team's skills{% endblock %}">
+    <title>{% block title %}Skills Matrix{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .fixed-header, .fixed-footer {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .fixed-header { top: 0; }
+        .fixed-footer { bottom: 0; }
+        .scrollable-content {
+            flex: 1;
+            overflow-y: auto;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .footer a {
+            text-decoration: none;
+            color: white;
+            transition: 0.4s;
+        }
+        .footer a:hover {
+            text-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff, 0 0 15px #00c6ff, 0 0 20px #00c6ff;
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="d-flex flex-column h-100">
+    <header class="fixed-header">
+        {% include 'header.html' %}
+    </header>
+
+    <main class="scrollable-content" role="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="fixed-footer">
+        {% include 'footer.html' %}
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
