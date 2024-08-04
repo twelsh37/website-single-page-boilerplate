@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boilerplate Site Single Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            transition: margin-top 0.3s ease-in-out;
+        }
+        .flex-row {
+            flex: 1;
+        }
+        footer {
+            flex-shrink: 0;
+        }
+        .navbar {
+            padding: 0.5rem 1rem;
+        }
+        .navbar-brand {
+            margin-right: auto;
+        }
+        .navbar-toggler {
+            margin-left: auto;
+        }
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #f8f9fa;
+                padding: 1rem;
+                padding-bottom: 1rem; /* Added padding at the bottom */
+                z-index: 1000;
+                transition: max-height 0.3s ease-in-out;
+                max-height: 0;
+                overflow: hidden;
+            }
+            .navbar-collapse.show {
+                max-height: 300px; /* Adjust this value as needed */
+            }
+            body.menu-open main {
+                margin-top: calc(300px + 1rem); /* Adjusted to account for padding */
+            }
+        }
+        .footer a {
+            text-decoration: none;
+            color: white;
+            transition: 0.4s;
+        }
+        .footer a:hover {
+            text-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff, 0 0 15px #00c6ff, 0 0 20px #00c6ff;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Site Name Here</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="index2.html">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-shrink-0">
+        <div class="container-fluid h-100 d-flex flex-column py-3">
+            <!-- Row 1 -->
+            <div class="row flex-row pt-3 pb-3 h-100">
+                <div class="col-md-6 col-sm-12 d-flex flex-column pb-3">
+                    <div class="bg-light p-3 border rounded-4 h-100 d-flex flex-column">
+                        <h2>Column 1 Row 1(6 columns)</h2>
+                        <p>This column takes up 6 columns on larger screens and 12 columns (full width) on smaller screens.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 d-flex flex-column pb-3">
+                    <div class="bg-light p-3 border rounded-4 h-100 d-flex flex-column">
+                        <h2>Column 2 Row 1 (3 columns)</h2>
+                        <p>This column takes up 3 columns on larger screens and 12 columns on smaller screens.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 d-flex flex-column pb-3">
+                    <div class="bg-light p-3 border rounded-4 h-100 d-flex flex-column">
+                        <h2>Column 3 Row 1 (3 columns)</h2>
+                        <p>This column takes up 3 columns on larger screens and 12 columns on smaller screens.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row flex-row pb-1 h-100">
+                <div class="col-md-6 col-sm-12 d-flex flex-column pb-1">
+                    <div class="bg-light p-3 border rounded-4 h-100 d-flex flex-column">
+                        <h2>Column 1 Row 2(6 columns)</h2>
+                        <p>This column takes up 6 columns on larger screens and 12 columns (full width) on smaller screens.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 d-flex flex-column pb-1">
+                    <div class="bg-light p-3 border rounded-4 h-100 d-flex flex-column">
+                        <h2>Column 2 Row 2 (3 columns)</h2>
+                        <p>This column takes up 3 columns on larger screens and 12 columns on smaller screens.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 d-flex flex-column pb-1">
+                    <div class="bg-light p-3 border rounded-4 h-100 d-flex flex-column">
+                        <h2>Column 3 Row 2 (3 columns)</h2>
+                        <p>This column takes up 3 columns on larger screens and 12 columns on smaller screens.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<footer>
+    <div class="contain footer">
+        <div class="bg-dark text-white text-center py-3 mt-auto d-flex align-items-center justify-content-between p-5">
+            <p class="mb-0">&copy; 2024 twelsh37@gmail.com. All rights reserved.</p>
+            <ul class="mini_list list-unstyled mb-0 pe-3">
+                <li><a href="privacy.html">Privacy policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+
+        navbarToggler.addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when a nav item is clicked
+        var navItems = document.querySelectorAll('.nav-link');
+        navItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
